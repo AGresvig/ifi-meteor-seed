@@ -10,4 +10,6 @@ ian:bootstrap-3
 accounts-base
 accounts-password
 ian:accounts-ui-bootstrap-3
+mrt:accounts-soundcloud
+service-configuration
 

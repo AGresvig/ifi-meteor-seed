@@ -32,7 +32,23 @@
 <template name="hello">
   <div class="container">
     <div class="jumbotron">
-      <h1>Welcome to Meteor!</h1>
+      {{#if currentUser}}
+        <h2>Welcome {{currentUser.profile.name}}!</h2>
+        <p>You're connected, thats really cool.</p>
+        {{#with currentUser.services.soundcloud}}
+        <div class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object" src="{{avatar_url}}" alt="Profile avatar">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading"><a href="{{permalink_url}}">{{username}}</a></h4>
+            <p>from {{city}}, {{country}}</p>
+          </div>
+        </div>
+        {{/with}}
+      {{else}}
+        <p>Please log in</p>
+      {{/if}}
     </div>
   </div>
 </template>

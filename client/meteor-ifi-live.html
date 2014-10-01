@@ -1,8 +1,4 @@
-<head>
-  <title>meteor-ifi-live</title>
-</head>
-
-<body>
+<template name="masterLayout">
   <!-- Static navbar -->
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
@@ -17,7 +13,8 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/mylikes">My Likes</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}}
@@ -26,10 +23,12 @@
     </div>
   </nav>
 
-  {{> hello}}
-</body>
+  <div class="container">
+    {{> yield}}
+  </div> <!-- /container -->
+</template>
 
-<template name="hello">
+<template name="home">
   <div class="container">
     <div class="jumbotron">
       {{#if currentUser}}
@@ -49,6 +48,14 @@
       {{else}}
         <p>Please log in</p>
       {{/if}}
+    </div>
+  </div>
+</template>
+
+<template name="mylikes">
+  <div class="container">
+    <div class="jumbotron">
+      <h1>This is the new page!</h1>
     </div>
   </div>
 </template>

@@ -1,14 +1,8 @@
-Template.hello.helpers({
-  counter: function () {
-    return Session.get("counter");
-  }
-});
+Router.configure({layoutTemplate: 'masterLayout'});
 
-Template.hello.events({
-  'click button': function () {
-    // increment the counter when button is clicked
-    Session.set("counter", Session.get("counter") + 1);
-  }
+Router.map(function() {
+  this.route('home', {path: '/'});
+  this.route('mylikes', {path: '/mylikes'});
 });
 
 Template._loginButtonsLoggedInDropdown.events({

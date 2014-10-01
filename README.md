@@ -218,3 +218,7 @@ But you'll have to create a new app in Soundcloud that corresponds to the deploy
 ## Do something fun!
 The [Soundcloud API](https://developers.soundcloud.com/docs/api/reference) provides lots of endpoints to play with. Use these endpoints to create something cool! 
 
+
+
+# Demo
+A demo of this app is running at http://ifi-meteor-seed.meteor.com/

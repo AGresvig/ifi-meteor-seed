@@ -54,8 +54,18 @@
 
 <template name="mylikes">
   <div class="container">
-    <div class="jumbotron">
-      <h1>This is the new page!</h1>
+    <div class="list-group">
+      {{#each likes}}
+      <a class="like-track media list-group-item">
+        <a class="pull-left" href="{{permalink_url}}" target="_blank">
+          <img class="media-object" src="{{artwork_url}}" alt="Coverart" width="100px" height="100px">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">{{title}}</h4>
+          <p class="description">{{description}}</p>
+        </div>
+      </a>
+      {{/each}}
     </div>
   </div>
 </template>

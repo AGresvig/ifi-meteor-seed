@@ -14,3 +14,7 @@ Template._loginButtonsLoggedInDropdown.events({
     });
   }
 });
+
+Template.mylikes.likes = function() {
+    return Soundcloud.getLikes();
+}
